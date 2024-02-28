@@ -44,7 +44,7 @@
 
 <script setup></script>
 
-<style>
+<style scoped>
 .about {
     display: flex;
     flex-direction: row;
