@@ -21,6 +21,8 @@
   padding: 2em;
   background-image: url(../src/assets/images/fond.png);
   background-size: cover;
+  min-width: 85vw;
+  min-height: 90vh;
 }
 
 .title {
