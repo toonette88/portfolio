@@ -17,7 +17,7 @@
 
 #app{
   font-family: "Nickainley";
-  /*color : #004aad;*/
+  font-weight: 500;
   padding: 2em;
   background-image: url(../src/assets/images/fond.png);
   background-size: cover;
