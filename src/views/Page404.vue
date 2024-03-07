@@ -1,5 +1,5 @@
 <template>
-    <div class="page404">
+    <div id="page404" class="page404">
         <p>Il semblerait qu'il y ai un petit soucis ...</p>
         <figure>
             <img src="../assets/images/erreur404.png" alt="image marrante d'une fille au cheveux rouge disant oups et montrant un 404 ">
