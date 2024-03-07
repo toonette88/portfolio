@@ -1,6 +1,6 @@
 <template>
     <h1 class="title">Qui suis-je ?</h1>
-  <section class="about">
+  <section class="about" id="about">
       <div class="img">
       <figure>
         <a href="/page404" target="_blank">
