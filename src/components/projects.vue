@@ -16,7 +16,7 @@
 
 </script>
 
-<style lang="css" scoped>
+<style  scoped>
 section{
 display: flex;
 flex-direction: row;
