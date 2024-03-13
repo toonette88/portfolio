@@ -1,33 +1,42 @@
 <template>
   <h1 class="title">Contact</h1>
-  <form ref="form" @submit.prevent="sendEmail">
+  <form @submit.prevent="sendEmail()">
     <div class="name">
       <div class="form_items name">
         <label for="last_name">Nom :</label>
         <input
           type="text"
-          v-model="last_name"
+          v-model.capitalize.trim="last_name"
           name="last_name"
           id="last_name"
+          required
         />
       </div>
       <div class="form_items name">
         <label for="first_name">Prénom : </label>
         <input
           type="text"
-          vmodel="fisrt_name"
+          vmodel.trim="first_name"
           name="first_name"
           id="first_name"
+          required
         />
       </div>
     </div>
     <div class="form_items">
       <label for="object">Objet : </label>
-      <input type="text" v-model="object" name="object" id="object" />
+      <input
+        type="text"
+        v-model.trim="object"
+        name="object"
+        id="object"
+        required
+      />
     </div>
     <div class="form_items">
       <label for="message" id="message_title">Message : </label>
-      <textarea v-model="message" name="message" id="message"></textarea>
+      <textarea v-model.trim="message" name="message" id="message"  required> </textarea>
+     
     </div>
     <input type="submit" value="Envoyer" id="submit_button" />
   </form>
@@ -82,18 +91,39 @@ textarea {
   background-color: cadetblue;
   color: aliceblue;
 }
+
+.error {
+  background-color: red;
+}
 </style>
 
 <script setup>
+import emailjs from "@emailjs/browser";
+import { ref } from "vue";
+const last_name = ref("");
+const first_name = ref("");
+const object = ref("");
+const message = ref("");
+const valueMissing = ref("");
+
+
+
 function sendEmail() {
-  if (!last_name.value || !first_name.value | !object.value || !message.value) {
-    alert("Tous les champs doivent être complétés");
-  } else {
-    last_name.value = null;
-    first_name.value = null;
-    object.value = null;
-    message.value = null;
-    alert("Votre messagea été envoyé");
-  }
+  (function () {
+    emailjs.init("en-GWbfN6-HqSTv3m");
+  })();
+  const params = {
+    to_name: "Amelie",
+    from_name: last_name.value + "" + first_name.value,
+    about: object.value,
+    message: message.value,
+  };
+
+  emailjs
+    .send("service_msjzgvm", "template_6flcsrc", params)
+    .then((res) => {
+      alert("E-mail envoyé avec succès");
+    })
+    .catch();
 }
 </script>
