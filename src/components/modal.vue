@@ -2,7 +2,7 @@
   <div>
     <h2>{{ title }}</h2>
     <button type="button" @click="openModal" class="buttonpicture">
-      <img src="{{ picture }}" alt="" />
+      <img src="../assets/images/{{ pictureImage }}" alt="{{ pictureDescription }}" />
     </button>
   </div>
   <TransitionRoot appear :show="isOpen" as="template">
@@ -78,12 +78,14 @@ function setIsOpen(value) {
   isOpen.value = value;
 }
 
-defineProps({
+ defineProps({
   title: String,
   visiteLink: String,
   gitHubRepository: String,
   technologies: String,
-  creationDate: Date,
-  picture: String,
+  creationDate: String,
+  pictureImage: Object,
+  pictureDescription: String,
 });
+
 </script>
