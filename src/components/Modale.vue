@@ -1,26 +1,25 @@
 <template>
-<div class="bloc-modale" v-if="revele">
-    <div v-on:click="toggleModale" class="overlay"></div>
+<div class="bloc-modale" v-if="isOpen">
+    <div @click.stop="emit('modal-close')" class="overlay"></div>
 
     <div class="modale" >
-            <button v-on:click="toggleModale" class="btn-modale">
+            <button @click.stop="emit('modal-close')" @click="openModal(projet)"  class="btn-modale">
                <img src="../assets/images/bouton-fermer.png" alt="bouton de fermeture">
               </button>
             <div class="content-modale" >
-                <h2>{{ title }}</h2>
-                <p>
-                  Date de création : {{ creationDate }} <br />
-                  Technologies utilisées: {{ technologies }}<br />
+              <p>
+              <h2>{{ title }}</h2>
+              
+                  Date de création : {{ creationDate }},<br>
+                  Technologies utilisées: {{ technologies }} <br>
                   <a href="{{visiteLink}}" target="_blank"
-                    >Lien vers la création</a
-                  >
-                  <br />
+                    >Lien vers la création</a  
+                  > <br>
                   <a href="{{ gitHubRepository }}" target="_blank"
                     >Lien du Repository</a
                   >
                 </p>
             </div>
-
 
     </div>
 
@@ -28,20 +27,22 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { defineProps, defineEmits } from "vue";
 
-const revele = ref('')
 
-defineProps({
+const props = defineProps({
+  isOpen: Boolean,
+  projetIndex: Object,
+  openModal: Function,
   title: String,
-  visiteLink: String,
-  gitHubRepository: String,
-  technologies: String,
   creationDate: String,
-  pictureImage: String,
-  pictureDescription: String,
-});
+  technologies: String,
+  visiteLink: String,
+  gitHUbRepository: String,
 
+  });
+
+const emit = defineEmits(["modal-close"]);
 
 
 </script>
@@ -54,6 +55,7 @@ defineProps({
         left:0;
         right:0;
         display:flex ;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -68,18 +70,18 @@ defineProps({
     }
 
     .modale {
-        background: #f1f1f1;
+           background: #f1f1f1;
         color: #333;
         padding:50px;
         position: fixed;
         top :30%;  
+        width: 300px;
     }
 
-    figure{
-      width: 1px;
-    }
+  
     .btn-modal {
       position: absolute;
+      align-self: flex-end;
       top: 10px;
       right: 10px;
     }
