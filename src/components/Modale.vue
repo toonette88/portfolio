@@ -3,24 +3,23 @@
     <div @click.stop="emit('modal-close')" class="overlay"></div>
 
     <div class="modale" >
-            <button @click.stop="emit('modal-close')" @click="openModal(projet)"  class="btn-modale">
+            <button @click.stop="emit('modal-close')" @click="openModal(project)"  class="btn-modale">
                <img src="../assets/images/bouton-fermer.png" alt="bouton de fermeture">
               </button>
             <div class="content-modale" >
               <p>
-              <h2>{{ title }}</h2>
+              <h2>{{ props.project.title }}</h2>
               
-                  Date de création : {{ creationDate }},<br>
-                  Technologies utilisées: {{ technologies }} <br>
-                  <a href="{{visiteLink}}" target="_blank"
-                    >Lien vers la création</a  
-                  > <br>
-                  <a href="{{ gitHubRepository }}" target="_blank"
-                    >Lien du Repository</a
-                  >
+                  Date de création : {{ props.project.creationDate }},<br>
+                  Technologies utilisées: {{ props.project.technologies }} <br>
+                  <a href="{{props.project.visiteLink}}" target="_blank">
+                    Lien vers la création
+                    </a> <br>
+                  <a href="{{ props.project.gitHubRepository }}" target="_blank">
+                    Lien du Repository
+                    </a>
                 </p>
             </div>
-
     </div>
 
 </div>
@@ -32,15 +31,9 @@ import { defineProps, defineEmits } from "vue";
 
 const props = defineProps({
   isOpen: Boolean,
-  projetIndex: Object,
   openModal: Function,
-  title: String,
-  creationDate: String,
-  technologies: String,
-  visiteLink: String,
-  gitHUbRepository: String,
-
-  });
+  project: Object,
+   });
 
 const emit = defineEmits(["modal-close"]);
 
@@ -58,6 +51,8 @@ const emit = defineEmits(["modal-close"]);
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size: 1.5em;
+       
     }
 
     .overlay {
@@ -70,20 +65,30 @@ const emit = defineEmits(["modal-close"]);
     }
 
     .modale {
-           background: #f1f1f1;
+           background: rgba(250, 249, 249, 0.866);
         color: #333;
         padding:50px;
         position: fixed;
         top :30%;  
-        width: 300px;
-    }
+        border-radius: 15%;
+        border-style: double;
+        border-width: 10px;
+        border-color:rgb(40, 150, 131);
+            }
 
   
-    .btn-modal {
-      position: absolute;
-      align-self: flex-end;
-      top: 10px;
+    button {
+      position:absolute;
+      top:10px;
       right: 10px;
+      border-style: none;
+      background-color: transparent;
+      
+    }
+
+   h2 {
+      padding-bottom: 20px;
+      margin-top: -20px;
     }
     
     </style>
