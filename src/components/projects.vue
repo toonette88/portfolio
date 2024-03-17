@@ -10,18 +10,19 @@
         />
       </button>
     </div>
-    <Modale
+    <Modal
       :isOpen="isModalOpened"
       @modal-close="closeModal"
       :project="selectedProject"
     >
-    </Modale>
+    </Modal>
+
   </section>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import Modale from "./Modale.vue";
+import Modal from "./Modal.vue";
 import imageCV from "@/assets/images/imageCV.png";
 import cahierDesCharges from "@/assets/images/cahierdescharges.png";
 import commentaires from "@/assets/images/Commentaires.png";
@@ -46,6 +47,7 @@ const projects = [
     pictureImage: imageCV,
     pictureDescription: "image d'un curriculum vitae marron et blanc",
     visitLink: "../../../CV/index.html",
+
     gitHubRepository: "https://github.com/toonette88/Mon-CV",
     technologies: "Html5 et Css3",
   },
@@ -62,7 +64,7 @@ const projects = [
   {
     title: "Dynamiser un espace commentaires",
     creationDate: "9 février 2024",
-    pictureImage: commentaires,
+    pictureImage:commentaires,
     pictureDescription: "Formulaire pour commentaires",
     visitLink:
       "../../../DynamiserUnEspaceDeCommentaires_DocumentsDevoir/index.html",
