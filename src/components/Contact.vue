@@ -1,4 +1,5 @@
 <template>
+
   <section id="contact">
     <h1 class="title">Contact</h1>
     <form @submit.prevent="sendEmail()">
@@ -57,65 +58,66 @@ form {
   margin-bottom: 10px;
 }
 
-.name {
-  display: flex;
-  flex-direction: row;
-}
+  .name {
+    display: flex;
+    flex-direction: row;
+  }
 
-.form_items {
-  display: flex;
-  font-size: 2em;
-  padding: 5px;
-  margin: 5px;
-  align-items: center;
-}
+  .form_items {
+    display: flex;
+    font-size: 2em;
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
+  }
 
-#submit_button {
-  width: 150px;
-  align-self: center;
-}
+  #submit_button {
+    width: 150px;
+    align-self: center;
+  }
 
-input {
-  margin-left: 10px;
-  width: 150px;
-  background-color: cadetblue;
-  color: aliceblue;
-}
+  input {
+    margin-left: 10px;
+    width: 150px;
+    background-color: cadetblue;
+    color: aliceblue;
+  }
 
-label {
-  margin-left: 45px;
-}
+  label {
+    margin-left: 45px;
+  }
 
-#message_title {
-  margin-left: 0px;
-}
+  #message_title {
+    margin-left: 0px;
+  }
 
-textarea {
-  width: 70%;
-  min-height: 100px;
-  margin-left: 10px;
-  background-color: cadetblue;
-  color: aliceblue;
-}
+  textarea {
+    width: 70%;
+    min-height: 100px;
+    margin-left: 10px;
+    background-color: cadetblue;
+    color: aliceblue;
+  }
 
-.error {
-  background-color: red;
-}
+  .error {
+    background-color: red;
+  }
 </style>
 
 <script setup>
-import emailjs from "@emailjs/browser";
-import { ref } from "vue";
-const last_name = ref("");
-const first_name = ref("");
-const object = ref("");
-const message = ref("");
-const valueMissing = ref("");
+  import emailjs from "@emailjs/browser";
+  import { ref } from "vue";
+  const last_name = ref("");
+  const first_name = ref("");
+  const object = ref("");
+  const message = ref("");
+  const valueMissing = ref("");
 
 function sendEmail() {
   (function () {
     emailjs.init("en-GWbfN6-HqSTv3m");
   })();
+
   const params = {
     to_name: "Amelie",
     from_name: last_name.value + "" + first_name.value,
@@ -129,5 +131,6 @@ function sendEmail() {
       alert("E-mail envoyé avec succès");
     })
     .catch();
-}
+  };
+  
 </script>

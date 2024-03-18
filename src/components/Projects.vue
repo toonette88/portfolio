@@ -18,7 +18,7 @@
       :project="selectedProject"
     >
     </Modal>
-     </section>
+  </section>
 </template>
 
 <script setup>
@@ -28,14 +28,14 @@ import imageCV from "@/assets/images/imageCV.png";
 import specifications from "@/assets/images/cahierdescharges.png";
 import comments from "@/assets/images/Commentaires.png";
 
-const isModalOpened = ref(false);
+  const isModalOpened = ref(false);
 
-const selectedProject = ref(null);
+  const selectedProject = ref(null);
 
-const openModal = (project) => {
-  isModalOpened.value = true;
-  selectedProject.value=project;
-};
+  const openModal = (project) => {
+    isModalOpened.value = true;
+    selectedProject.value=project;
+  };
 
 const closeModal = () => {
   isModalOpened.value = false;
@@ -74,10 +74,41 @@ const projects = [
   },
 ];
 
+  const projects = [
+    {
+      title: "Curriculum Vitae",
+      creationDate: "12 janvier 2024",
+      pictureImage: imageCV,
+      pictureDescription: "image d'un curriculum vitae marron et blanc",
+      visitLink: "../../../CV/index.html",
+      gitHubRepository: "https://github.com/toonette88/Mon-CV",
+      technologies: "Html5 et Css3",
+    },
+    {
+      title: "Cahier des charges",
+      creationDate: "19 janvier 2024",
+      pictureImage: cahierDesCharges,
+      pictureDescription:
+        "page de garde d'un cahier des charges avec un dessin de chaussettes",
+      visitLink: "../../../RedigerUnCahierDesCharges/cahierdescharges.pdf",
+      gitHubRepository: "Non déposé sur GitHub",
+      technologies: "None",
+    },
+    {
+      title: "Dynamiser un espace commentaires",
+      creationDate: "9 février 2024",
+      pictureImage: commentaires,
+      pictureDescription: "Formulaire pour commentaires",
+      visitLink:
+        "../../../DynamiserUnEspaceDeCommentaires_DocumentsDevoir/index.html",
+      gitHubRepository:
+        "https://github.com/toonette88/Dynamiser-un-espace-commentaires",
+      technologies: "Html5, Css3 et JavaScript",
+    },
+  ];
 </script>
 
 <style scoped>
-
 
 section {
   display:flex;
@@ -104,16 +135,22 @@ section:hover > h1 {
   border-style: none;
 }
 
-img {
-  min-width: 200px;
-  height: 250px;
-}
+  button {
+    font-family: inherit;
+    font-size: 1.2em;
+    background-color: transparent;
+    border-style: none;
+  }
 
-img:hover {
-  box-shadow: 14px 12px 9px 4px rgba(97, 93, 93, 0.75);
-  -webkit-box-shadow: 14px 12px 9px 4px rgba(97, 93, 93, 0.75);
-  -moz-box-shadow: 14px 12px 9px 4px rgba(97, 93, 93, 0.75);
-}
+  img {
+    min-width: 200px;
+    height: 250px;
+  }
 
+  img:hover {
+    box-shadow: 14px 12px 9px 4px rgba(97, 93, 93, 0.75);
+    -webkit-box-shadow: 14px 12px 9px 4px rgba(97, 93, 93, 0.75);
+    -moz-box-shadow: 14px 12px 9px 4px rgba(97, 93, 93, 0.75);
+  }
 </style>
 

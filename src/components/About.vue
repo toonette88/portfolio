@@ -8,7 +8,7 @@
           <img
             src="../assets/images/profil.png"
             alt="Photo d'une femme aux cheveux attaché portant des lunettes"
-          />
+          >
         </a>
       </figure>
     </div>
@@ -55,8 +55,10 @@
 }
 
 .about {
-    
-    font-size: 1.2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.2em;
 }
 
 section:hover > h1 {
@@ -69,7 +71,6 @@ figure {
     width: 200px;
     height: 200px;
     padding-right :2em;
-   
 }
 
 figure img {
@@ -81,4 +82,5 @@ figure img {
 p {
   text-indent: 50px;
 }
+
 </style>
