@@ -93,7 +93,4 @@
     padding-bottom: 20px;
     }
 
-  a{
-      background-color:none;
-  }
 </style>
