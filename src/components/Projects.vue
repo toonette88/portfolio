@@ -73,39 +73,6 @@ const projects = [
     technologies: "Html5, Css3 et JavaScript",
   },
 ];
-
-  const projects = [
-    {
-      title: "Curriculum Vitae",
-      creationDate: "12 janvier 2024",
-      pictureImage: imageCV,
-      pictureDescription: "image d'un curriculum vitae marron et blanc",
-      visitLink: "../../../CV/index.html",
-      gitHubRepository: "https://github.com/toonette88/Mon-CV",
-      technologies: "Html5 et Css3",
-    },
-    {
-      title: "Cahier des charges",
-      creationDate: "19 janvier 2024",
-      pictureImage: cahierDesCharges,
-      pictureDescription:
-        "page de garde d'un cahier des charges avec un dessin de chaussettes",
-      visitLink: "../../../RedigerUnCahierDesCharges/cahierdescharges.pdf",
-      gitHubRepository: "Non déposé sur GitHub",
-      technologies: "None",
-    },
-    {
-      title: "Dynamiser un espace commentaires",
-      creationDate: "9 février 2024",
-      pictureImage: commentaires,
-      pictureDescription: "Formulaire pour commentaires",
-      visitLink:
-        "../../../DynamiserUnEspaceDeCommentaires_DocumentsDevoir/index.html",
-      gitHubRepository:
-        "https://github.com/toonette88/Dynamiser-un-espace-commentaires",
-      technologies: "Html5, Css3 et JavaScript",
-    },
-  ];
 </script>
 
 <style scoped>
