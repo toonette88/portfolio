@@ -51,7 +51,6 @@
 
   aside{
     display: flex;
-    width: 20 px;
   }
 
   button {
