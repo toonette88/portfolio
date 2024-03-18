@@ -6,13 +6,13 @@
           <img
             src="../assets/images/home.svg"
             alt="représentation d'une maison"
-          />
+          >
           Accueil
           <img 
             src="../assets/images/down-arrow.png" 
             alt="chevron descendant"
             class="chevron"
-            />
+            >
         </MenuButton>
       </div>
       <transition
@@ -38,7 +38,7 @@
             <MenuItem v-slot="{ active }">
               <button class="menu-list">
                 <a href="#contact">Contact</a>
-                </button>
+              </button>
             </MenuItem>
           </div>
         </MenuItems>
@@ -50,13 +50,13 @@
           <img
             src="../assets/images/TechTideIntegrator.svg"
             alt="logo bleu avec une intégral de TTIdt"
-          />
+          >
           Projets professionnels
           <img 
             src="../assets/images/down-arrow.png" 
             alt="chevron descendant"
             class="chevron"
-            />
+          >
         </MenuButton>
       </div>
       <transition
@@ -94,13 +94,13 @@
           <img
             src="../assets/images/Design.png"
             alt="logo rond bleu avec le texte my"
-          />
+          >
           Projets personnels
           <img 
             src="../assets/images/down-arrow.png" 
             alt="chevron descendant"
             class="chevron"
-            />
+          >
         </MenuButton>
       </div>
       <transition
@@ -118,7 +118,7 @@
                 <a href="#page404">A venir</a>
             </button>
             </MenuItem>
-             </div>
+          </div>
         </MenuItems>
       </transition>
     </Menu>
@@ -128,10 +128,10 @@
 <style scoped>
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  height: 150px;
   margin-right: 10px;
   column-gap: 50px;
 }
@@ -148,18 +148,17 @@
 }
 
 .menu-items{
-    position: fixed;
+  position: fixed;
 }
 
 .chevron{
-    width:15px;
-    padding-top: 25px;
+  width:15px;
+  padding-top: 25px;
 }
 
 .menu-list {
   display: flex;
   flex-direction: column;
-  align-items: left;
   border-style: none;
   margin-left: 20px;
   background-color: transparent;
@@ -168,8 +167,8 @@
 }
 
 a{
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 </style>
