@@ -1,5 +1,4 @@
 <template>
-
   <section id="contact">
     <h1 class="title">Contact</h1>
     <form @submit.prevent="sendEmail()">
@@ -46,17 +45,17 @@
 </template>
 
 <style scoped>
-section:hover > h1 {
-  text-decoration: underline solid;
-}
+  section:hover > h1 {
+    text-decoration: underline solid;
+  }
 
-form {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  min-width: 600px;
-  margin-bottom: 10px;
-}
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    min-width: 600px;
+    margin-bottom: 10px;
+  }
 
   .name {
     display: flex;
@@ -113,10 +112,10 @@ form {
   const message = ref("");
   const valueMissing = ref("");
 
-function sendEmail() {
-  (function () {
-    emailjs.init("en-GWbfN6-HqSTv3m");
-  })();
+  function sendEmail() {
+    (function () {
+      emailjs.init("en-GWbfN6-HqSTv3m");
+    })();
 
   const params = {
     to_name: "Amelie",
@@ -132,5 +131,5 @@ function sendEmail() {
     })
     .catch();
   };
-  
+
 </script>

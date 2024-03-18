@@ -15,7 +15,6 @@
       <time datetime="2024-03-04">4 mars 2024</time> <br>
       <a href="https://www.flaticon.com/fr/icones-gratuites/ui" title="ui icônes">Ui icônes créées par Arkinasi - Flaticon</a>
     </small>
-
   </div>
 </template>
 
@@ -34,5 +33,5 @@
   .footer a:hover {
     opacity: 50%;
   }
-  
+
 </style>

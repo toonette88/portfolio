@@ -48,37 +48,37 @@
 
 <style scoped>
 
-.flex-container{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+  .flex-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 
-.about {
-  align-items: center;
-  font-size: 1.2em;
-}
+  .about {
+    align-items: center;
+    font-size: 1.2em;
+  }
 
-section:hover > h1 {
-  text-decoration: underline solid;
-}
+  section:hover > h1 {
+    text-decoration: underline solid;
+  }
 
-figure {
+  figure {
     display: flex;
     align-items: center;
     width: 200px;
     height: 200px;
     padding-right :2em;
-}
+  }
 
-figure img {
-  width: 100%;
-  height: 100%;
-  border-radius: 15%;
-}
+  figure img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15%;
+  }
 
-p {
-  text-indent: 50px;
-}
+  p {
+    text-indent: 50px;
+  }
 
 </style>

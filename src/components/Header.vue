@@ -127,60 +127,60 @@
 
 <style scoped>
 
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  height: 150px;
-  margin-right: 10px;
-  column-gap: 50px;
-}
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    height: 150px;
+    margin-right: 10px;
+    column-gap: 50px;
+  }
 
-.menu-label{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  border-style:none ;
-  background-color:transparent;
-  font-family: inherit;
-  font-size: 2em;
-  font-weight: 500;  
-}
+  .menu-label{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-style:none ;
+    background-color:transparent;
+    font-family: inherit;
+    font-size: 2em;
+    font-weight: 500;  
+  }
 
-.menu-label:hover {
-  text-decoration: underline solid;
-}
+  .menu-label:hover {
+    text-decoration: underline solid;
+  }
 
-.menu-items{
-  position: fixed;
-}
+  .menu-items{
+    position: fixed;
+  }
 
-.chevron{
-  width:15px;
-  padding-top: 25px;
-}
+  .chevron{
+    width:15px;
+    padding-top: 25px;
+  }
 
-.menu-list {
-  display: flex;
-  flex-direction: column;
-  border-style: none;
-  margin-left: 20px;
-  background-color: transparent;
-  font-family: inherit;
-  font-size: 1.5em;
-}
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    border-style: none;
+    margin-left: 20px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1.5em;
+  }
 
-.menu-list:hover {
-  text-decoration: underline solid;
-}
+  .menu-list:hover {
+    text-decoration: underline solid;
+  }
 
-a{
-  text-decoration: none;
-  color: black;
-}
+  a{
+    text-decoration: none;
+    color: black;
+  }
 
 </style>
 
 <script setup>
-import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
+  import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 </script>
