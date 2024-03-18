@@ -1,6 +1,7 @@
 <template>
-    <h1 class="title">Qui suis-je ?</h1>
-  <section class="about" id="about">
+     <section class="about" id="about">
+      <h1 class="title">Qui suis-je ?</h1>
+      <div class="flex-container">
       <div class="img">
       <figure>
         <a href="/page404" target="_blank">
@@ -39,21 +40,32 @@
         ce soit dans ma vie professionnelle ou personnelle.
       </p>
     </div>
+  </div>
   </section>
 </template>
 
 <script setup></script>
 
 <style scoped>
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .about {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    
     font-size: 1.2em;
 }
 
-figure {
+section:hover > h1 {
+  text-decoration: underline solid;
+}
 
+figure {
+    display: flex;
+    align-items: center;
     width: 200px;
     height: 200px;
     padding-right :2em;

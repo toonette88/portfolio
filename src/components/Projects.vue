@@ -1,15 +1,17 @@
 <template>
-  <h1>Mes projets</h1>
-  <section id="projects">
-    <div v-for="(project, index) in projects" :key="index" class="container">
-      <button @click="openModal(project)" class="project btn">
+   <section id="projects">
+    <h1 class="title"> Mes projets </h1>
+    <div class="project-container">
+    <div class="project-content" v-for="(project, index) in projects" :key="index"  >
+      <div @click="openModal(project)" class="project btn">
         <h2>{{ project.title }}</h2>
         <img
-          :src="project.pictureImage"
+          :src="project.picture"
           alt="{{ project.pictureDescription }}"
         />
-      </button>
+      </div>
     </div>
+  </div>
     <Modal
       :isOpen="isModalOpened"
       @modal-close="closeModal"
@@ -23,8 +25,8 @@
 import { ref } from "vue";
 import Modal from "./Modal.vue";
 import imageCV from "@/assets/images/imageCV.png";
-import cahierDesCharges from "@/assets/images/cahierdescharges.png";
-import commentaires from "@/assets/images/Commentaires.png";
+import specifications from "@/assets/images/cahierdescharges.png";
+import comments from "@/assets/images/Commentaires.png";
 
 const isModalOpened = ref(false);
 
@@ -42,32 +44,32 @@ const closeModal = () => {
 const projects = [
   {
     title: "Curriculum Vitae",
-    creationDate: "12 janvier 2024",
-    pictureImage: imageCV,
+    date: "12 janvier 2024",
+    picture: imageCV,
     pictureDescription: "image d'un curriculum vitae marron et blanc",
-    visitLink: "../../../CV/index.html",
-    gitHubRepository: "https://github.com/toonette88/Mon-CV",
+    //link: "../../../CV/index.html",
+    //gitHubRepository: "https://github.com/toonette88/Mon-CV",
     technologies: "Html5 et Css3",
   },
   {
     title: "Cahier des charges",
-    creationDate: "19 janvier 2024",
-    pictureImage: cahierDesCharges,
+    date: "19 janvier 2024",
+    picture: specifications,
     pictureDescription:
       "page de garde d'un cahier des charges avec un dessin de chaussettes",
-    visitLink: "../../../RedigerUnCahierDesCharges/cahierdescharges.pdf",
-    gitHubRepository: "Non déposé sur GitHub",
+    //link: "../../../RedigerUnCahierDesCharges/cahierdescharges.pdf",
+    //gitHubRepository: "Non déposé sur GitHub",
     technologies: "None",
   },
   {
     title: "Dynamiser un espace commentaires",
-    creationDate: "9 février 2024",
-    pictureImage: commentaires,
+    date: "9 février 2024",
+    picture: comments,
     pictureDescription: "Formulaire pour commentaires",
-    visitLink:
-      "../../../DynamiserUnEspaceDeCommentaires_DocumentsDevoir/index.html",
-    gitHubRepository:
-      "https://github.com/toonette88/Dynamiser-un-espace-commentaires",
+  //  link:
+  //     "../../../DynamiserUnEspaceDeCommentaires_DocumentsDevoir/index.html",
+  //   gitHubRepository:
+  //     "https://github.com/toonette88/Dynamiser-un-espace-commentaires",
     technologies: "Html5, Css3 et JavaScript",
   },
 ];
@@ -75,18 +77,27 @@ const projects = [
 </script>
 
 <style scoped>
+
+
 section {
+  display:flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+section:hover > h1 {
+  text-decoration: underline solid;
+}
+
+.project-container {
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
   justify-content: space-around;
-}
-
-.container {
   height: 400px;
-  align-items: end;
-}
+  }
 
-button {
+
+.btn {
   font-family: inherit;
   font-size: 1.2em;
   background-color: transparent;
