@@ -1,15 +1,17 @@
 <template>
-  <h1>Mes projets</h1>
-  <section id="projects">
-    <div v-for="(project, index) in projects" :key="index" class="container">
-      <button @click="openModal(project)" class="project btn">
+   <section id="projects">
+    <h1 class="title"> Mes projets </h1>
+    <div class="project-container">
+    <div class="project-content" v-for="(project, index) in projects" :key="index"  >
+      <div @click="openModal(project)" class="project btn">
         <h2>{{ project.title }}</h2>
         <img
-          :src="project.pictureImage"
+          :src="project.picture"
           alt="{{ project.pictureDescription }}"
         />
-      </button>
+      </div>
     </div>
+  </div>
     <Modal
       :isOpen="isModalOpened"
       @modal-close="closeModal"
@@ -20,11 +22,11 @@
 </template>
 
 <script setup>
-  import { ref } from "vue";
-  import Modal from "./Modal.vue";
-  import imageCV from "@/assets/images/imageCV.png";
-  import cahierDesCharges from "@/assets/images/cahierdescharges.png";
-  import commentaires from "@/assets/images/Commentaires.png";
+import { ref } from "vue";
+import Modal from "./Modal.vue";
+import imageCV from "@/assets/images/imageCV.png";
+import specifications from "@/assets/images/cahierdescharges.png";
+import comments from "@/assets/images/Commentaires.png";
 
   const isModalOpened = ref(false);
 
@@ -35,9 +37,42 @@
     selectedProject.value=project;
   };
 
-  const closeModal = () => {
-    isModalOpened.value = false;
-  };
+const closeModal = () => {
+  isModalOpened.value = false;
+};
+
+const projects = [
+  {
+    title: "Curriculum Vitae",
+    date: "12 janvier 2024",
+    picture: imageCV,
+    pictureDescription: "image d'un curriculum vitae marron et blanc",
+    //link: "../../../CV/index.html",
+    //gitHubRepository: "https://github.com/toonette88/Mon-CV",
+    technologies: "Html5 et Css3",
+  },
+  {
+    title: "Cahier des charges",
+    date: "19 janvier 2024",
+    picture: specifications,
+    pictureDescription:
+      "page de garde d'un cahier des charges avec un dessin de chaussettes",
+    //link: "../../../RedigerUnCahierDesCharges/cahierdescharges.pdf",
+    //gitHubRepository: "Non déposé sur GitHub",
+    technologies: "None",
+  },
+  {
+    title: "Dynamiser un espace commentaires",
+    date: "9 février 2024",
+    picture: comments,
+    pictureDescription: "Formulaire pour commentaires",
+  //  link:
+  //     "../../../DynamiserUnEspaceDeCommentaires_DocumentsDevoir/index.html",
+  //   gitHubRepository:
+  //     "https://github.com/toonette88/Dynamiser-un-espace-commentaires",
+    technologies: "Html5, Css3 et JavaScript",
+  },
+];
 
   const projects = [
     {
@@ -74,16 +109,31 @@
 </script>
 
 <style scoped>
-  section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+
+section {
+  display:flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+section:hover > h1 {
+  text-decoration: underline solid;
+}
+
+.project-container {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  height: 400px;
   }
 
-  .container {
-    height: 400px;
-    align-items: end;
-  }
+
+.btn {
+  font-family: inherit;
+  font-size: 1.2em;
+  background-color: transparent;
+  border-style: none;
+}
 
   button {
     font-family: inherit;

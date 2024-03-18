@@ -147,6 +147,10 @@
   font-weight: 500;  
 }
 
+.menu-label:hover {
+  text-decoration: underline solid;
+}
+
 .menu-items{
   position: fixed;
 }
@@ -164,6 +168,10 @@
   background-color: transparent;
   font-family: inherit;
   font-size: 1.5em;
+}
+
+.menu-list:hover {
+  text-decoration: underline solid;
 }
 
 a{
