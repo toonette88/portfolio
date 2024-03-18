@@ -102,6 +102,5 @@
     -webkit-box-shadow: 14px 12px 9px 4px rgba(97, 93, 93, 0.75);
     -moz-box-shadow: 14px 12px 9px 4px rgba(97, 93, 93, 0.75);
   }
-
 </style>
 

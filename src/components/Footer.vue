@@ -34,4 +34,5 @@
   .footer a:hover {
     opacity: 50%;
   }
+  
 </style>

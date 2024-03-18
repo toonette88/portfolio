@@ -71,17 +71,17 @@
           <div class="menu-items">
             <MenuItem v-slot="{ active }">
               <button class="menu-list">
-                <a href="#page404">Custom by GB</a>
+                <a href="/page404">Custom by GB</a>
               </button>
             </MenuItem>
             <MenuItem v-slot="{ active }">
               <button class="menu-list">
-                <a href="#page404">Asgdb</a>
+                <a href="/page404">Asgdb</a>
               </button>
             </MenuItem>
             <MenuItem v-slot="{ active }">
               <button class="menu-list">
-                <a href="#page404">Priscilla Voyages</a>
+                <a href="/page404">Priscilla Voyages</a>
               </button>
             </MenuItem>
           </div>
@@ -115,7 +115,7 @@
           <div class="menu-items">
             <MenuItem v-slot="{ active }">
               <button class="menu-list">
-                <a href="#page404">A venir</a>
+                <a href="/page404">A venir</a>
             </button>
             </MenuItem>
           </div>
