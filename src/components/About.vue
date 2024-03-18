@@ -55,8 +55,6 @@
 }
 
 .about {
-  display: flex;
-  flex-direction: row;
   align-items: center;
   font-size: 1.2em;
 }
