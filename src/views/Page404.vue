@@ -27,7 +27,5 @@ p {
   figure {
   align-self: end;
   width: 50%;
-  & img {
-    width: 100%;
   }
 </style>
